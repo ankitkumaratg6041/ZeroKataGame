@@ -1,0 +1,10 @@
+.header .script-style-x{
+    color: rgb(194, 47, 194);
+    text-shadow: 1px 2px 5px rgb(243, 165, 243);
+    border-color: rgb(194, 47, 194);
+}
+.header .script-style-o{
+    color: #25c977;
+    text-shadow: 1px 2px 5px rgb(177, 244, 223);
+    border-color: #25c977;
+}
