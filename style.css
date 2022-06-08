@@ -19,7 +19,7 @@ body{
 
 /* Main container of the entire page i.e. The Left and Right Both */
 .container{
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     height: 100vh;
     width: 100vw;
     display: flex;
