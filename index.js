@@ -90,7 +90,9 @@ for(let i=0; i<boardTiles.length; i++){
             cellValue.innerText = player;
             count++;
             checkWon();
-            changePlayer();
+            if(!gameOver){
+                changePlayer();
+            }
         }else{
             invalidClick.play();
         }
