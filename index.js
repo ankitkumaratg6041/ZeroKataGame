@@ -14,6 +14,11 @@ let patternMatch;
 let txtStyle = "rgb(14, 240, 70)";
 let shadowStyle = "1px 2px 5px rgb(73, 242, 115)";
 
+let audio = new Audio('winner.mp3');
+let lostAudio = new Audio('down.mp3');
+let validClick = new Audio('valid-click.wav');
+let invalidClick = new Audio('wrong-click.wav');
+
 if(player === 'X'){
     playerX.classList.add("script-style-x");
     playerO.classList.remove("script-style-o");
@@ -52,12 +57,10 @@ let checkWon = () => {
             
             topLine.innerText = `Player ${player}`;
             bottomLine.innerText = `Wins The Game`;
-            let audio = new Audio('winner.mp3');
             audio.play();
         }else if(count == 9 && !gameOver){
             topLine.innerText = `No One Wins`;
             bottomLine.innerText = `It's a Tie!!`;
-            let lostAudio = new Audio('down.mp3');
             lostAudio.play();
         }
     });
@@ -83,10 +86,13 @@ for(let i=0; i<boardTiles.length; i++){
     boardTiles[i].addEventListener("click", () => {
         let cellValue = boardTiles[i].querySelector(".tile-text");
         if(cellValue.innerText === '' && !gameOver){
+            validClick.play();
             cellValue.innerText = player;
             count++;
             checkWon();
             changePlayer();
+        }else{
+            invalidClick.play();
         }
     })
 }
