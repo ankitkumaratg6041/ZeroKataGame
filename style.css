@@ -142,3 +142,13 @@ body{
 .board .board-tile:nth-child(7){
     border-bottom: none;
 }
+
+.author{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.author-credit{
+    font-size: 1.5rem;
+    color: #9A9A9A;
+}
